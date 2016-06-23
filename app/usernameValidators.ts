@@ -4,7 +4,12 @@ import {Control} from 'angular2/common';
 
      static shouldBeUnique(control: Control){
          return new Promise((resolve, reject) => {
-
+             setTimeout(function() {
+                 if (control.value == "mosh")
+                     resolve({ shouldBeUnique: true });
+                 else
+                     resolve(null)
+             }, 1000);
          });
      }
 

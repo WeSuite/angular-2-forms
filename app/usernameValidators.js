@@ -8,6 +8,12 @@ System.register([], function(exports_1, context_1) {
             class UsernameValidators {
                 static shouldBeUnique(control) {
                     return new Promise((resolve, reject) => {
+                        setTimeout(function () {
+                            if (control.value == "mosh")
+                                resolve({ shouldBeUnique: true });
+                            else
+                                resolve(null);
+                        }, 1000);
                     });
                 }
                 static cannotContainSpace(control) {
