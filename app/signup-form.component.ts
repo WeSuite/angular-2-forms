@@ -1,6 +1,6 @@
 import { Component } from 'angular2/core';
 import { ControlGroup, Control, Validators, FormBuilder } from 'angular2/common';
-import {UsernameValidators} from './usernameValidators';
+import { UsernameValidators } from './usernameValidators';
 
 @Component({
     selector: 'signup-form',
@@ -19,6 +19,11 @@ export class SignUpFormComponent {
     }
 
     signup(){
+        // var result = authService...
+        this.form.find('username').setErrors({
+            invalidLogin: true
+        })
+
         console.log(this.form.value)
     };
 }

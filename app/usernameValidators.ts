@@ -20,5 +20,4 @@ import {Control} from 'angular2/common';
 
         return null;
     }
-
 }

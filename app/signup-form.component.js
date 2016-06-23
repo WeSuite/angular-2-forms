@@ -34,6 +34,10 @@ System.register(['angular2/core', 'angular2/common', './usernameValidators'], fu
                     });
                 }
                 signup() {
+                    // var result = authService...
+                    this.form.find('username').setErrors({
+                        invalidLogin: true
+                    });
                     console.log(this.form.value);
                 }
                 ;
